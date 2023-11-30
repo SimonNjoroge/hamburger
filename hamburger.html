@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>🥞️ Hamburger</title>
+   <link rel="stylesheet" href="main.css">
+</head>
+<body>
+      <!-- nav bar -->
+   <nav>
+      <!-- logo -->
+      <div class="logo">
+         <h1>🥞️ Hamburger</h1>
+      </div>
+      <!-- nav link -->
+      <div class="navlink">
+         <li><a href="/hamburger.html" class="active">🏠️ Home</a></li>
+         <li><a href="#description" class="non-active">🏅️ About</a><li>
+         <li><a href="#card-1" class="non-active">🥞️ Hamburger</a></li>
+         <li><a href="#form" class="non-active">☎️ Contact</a></li>
+      </div>
+      <!-- hamburger menu -->
+      <div id="menu" class="menu">
+      <!-- use pseudo classes #best# -->
+      </div>
+      <div class="avatar">
+         <img src="avatar.png" alt="avatar">
+      </div>
+   </nav>
+   <div id="mobile-menu" class="hidden-reveal">
+      <div class="navlink-mobile">
+         <li><a href="/hamburger.html" class="active">🏠️ Home</a></li>
+         <li><a href="#description" class="non-active">🏅️ About</a><li>
+         <li><a href="#card-1" class="non-active">🥞️ Hamburger</a></li>
+         <li><a href="#form" class="non-active">☎️ Contact</a></li>
+      </div>
+   </div>
+
+
+      <!-- home -->
+
+   <div id="home">
+      <div id="description">
+         <h2>Hamburgers !</h2>
+         <p>Do you love Hamburgers ? </p>
+         <p>Definitely that is a very simple question.</p>
+         <p>Wanna grab some ? Why not go to <a href="http://Hamburgers.com" target="_blank non-opener">Shop</a> You'll Love it.</p>
+      </div>
+   </div>
+   <div id="card">
+      <div id="details">
+         <h2>Price Details</h2>
+         <div id="card-1">
+            <h1>🥞️</h1>
+            <h3>Grocify Shop</h3>
+            <p>Nakuru</p>
+            <p>Nakuru - Sigor Road</p>
+            <p>Prices</p>
+            <p><small>Large : 450/-</small></p>
+            <p><small>Medium : 350/-</small></p>
+            <p><small>Small : 250/-</small></p>
+            
+         </div>
+      </div>
+      
+   </div>
+      <!-- js for hamburger menu -->
+   <script async>
+      const menu = document.getElementById('menu');
+
+      const mobilemenu = document.getElementById('mobile-menu');
+
+      // for hamburger menu functionality
+      // reveal and remove sidebar menu for mobile
+      menu.onclick = function()
+      {
+         mobilemenu.classList.toggle('reveal');
+         menu.classList.toggle('open');
+      }
+      
+      // function to hide menu on scroll
+      function hideMenu() {
+         menu.classList.remove('open');
+         mobilemenu.classList.remove('reveal')
+      }
+      // Event listener for the scroll event on the window
+      window.addEventListener('scroll', () => {
+         hideMenu();
+      });
+
+   </script>
+</body>
+</html>

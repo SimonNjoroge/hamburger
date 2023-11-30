@@ -1,0 +1,190 @@
+*
+{
+   text-decoration: none;
+   list-style: none;
+   color: #fff
+}
+html
+{
+   min-width: 290px;
+   scroll-behavior: smooth;
+}
+body
+{
+   background-color: #190e42;
+   font-family: ubuntu;
+}
+img
+{
+   cursor: pointer;
+   border-radius: 3px;
+}
+h2
+{  
+   padding: 10px;
+   border-radius: 5px;
+   border: solid 2px #352285;
+}
+nav
+{
+   width: 100%;
+   height: 100px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+}
+.logo
+{
+   cursor: pointer;
+}
+.logo:hover
+{
+   opacity: 80%;
+}
+.navlink
+{
+   display: flex;
+   gap: 20px;
+}
+a:hover
+{
+   opacity: 50%;
+}
+a.active
+{
+   color: #fd3;
+}
+#menu
+{  
+   width: 35px;
+   height: 35px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: .2s;
+   cursor: pointer;
+}
+#menu::before
+{
+   content: '';
+   position: absolute;
+   width: 28px;
+   height: 3px;
+   background-color: #fff;
+   transform: translateY(-8px);
+   border-radius: 2px;
+   box-shadow: 0 8px 0 #fff;
+   transition: .2s;
+}
+#menu::after
+{
+   content: '';
+   position: absolute;
+   width: 28px;
+   height: 3px;
+   background-color: #fff;
+   transform: translateY(8px);
+   border-radius: 2px;
+   transition: .2s;
+}
+#menu.open::before
+{
+   transform: translateY(0px) rotate(45deg);
+   box-shadow: 0 0 0#fff;
+}
+#menu.open::after
+{
+   transform: translateY(0px) rotate(-45deg);
+}
+#mobile-menu
+{
+   position: fixed;
+   right: -250px; 
+   width: 150px;
+   height: 100%;
+   padding: 20px;
+   border-radius: 5px;
+   line-height: 4rem;
+   background-color: #3622856b;
+   transition: .5s;
+}
+#mobile-menu.reveal
+{
+   background-color: #362285fa;
+   transition: .5s;
+   transform: translateX(-250px);
+}
+
+#home
+{
+   padding: 10px;
+   margin: 0 auto;
+}
+
+#home a
+{
+   color: #fd3;
+}
+#card
+{
+   padding: 10px;
+   margin: 0 auto;
+}
+#home
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+#card
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+#card-1
+{
+   border: solid 1.5px #352285;
+   padding: 10px;
+   border-radius: 12px;
+   height: 350px;
+   cursor: pointer;
+   transition: .5s;
+}
+#card-1:hover
+{
+   border: solid 1.5px #411fca;
+   padding: 10px;
+   border-radius: 12px;
+   height: 350px;
+   cursor: pointer;
+   box-shadow: 0 0 10px #411fca;
+   transition: .5s;
+}
+
+
+
+@media (max-width: 768px) {
+   .navlink
+   {
+      display: none;
+   }
+   .avatar
+   {
+      display: none;
+   }
+}
+@media (min-width: 768px) {
+   #menu
+   {
+      display: none;
+   }
+   #mobile-menu
+   {
+      display: none;
+   }
+}
